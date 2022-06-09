@@ -11,6 +11,17 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+function titleCased() {
+  const ziggler = tutorials.map((cbf) => {
+      const whatAmIDoing = cbf
+          .split(' ')
+          .map((word) => {
+              return word.charAt(0).toUpperCase() + word.slice(1)
+          })
+          .join(' ')
+
+      return whatAmIDoing
+  })
+  return ziggler
 }
+console.log(titleCased())
